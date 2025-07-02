@@ -1,49 +1,59 @@
-Business Card Information Extractor Application 📇
+# 📇 BizCardX: Extracting Business Card Data with OCR
 
-This project is a Streamlit-based application that utilizes easyOCR to extract relevant information from an uploaded business card image and organizes it in a user-friendly interface. The application allows users to save the extracted information and the uploaded image into a database for easy retrieval and management.
+**BizCardX** is a Flask + Dash-based web application that allows users to upload business card images, extract relevant information using OCR (EasyOCR), and store it in a database. The app features a clean dashboard UI where users can **Create, Read, Update, and Delete (CRUD)** entries with both the extracted text and original image.
 
-🚀 Features
-Business Card OCR: Extracts information from uploaded business card images using easyOCR.
-Extracted fields include:
-Company Name
-Card Holder Name
-Designation
-Mobile Number
-Email Address
-Website URL
-Area, City, State, and Pin Code
-Database Integration:
-Save extracted data along with the business card image into a database.
-View and manage multiple entries efficiently.
-Intuitive GUI:
-Simple, guided process for uploading images and viewing results.
-Clean and organized display of extracted information.
-Scalable Design:
-Supports multiple business card entries.
-Extensible architecture for future enhancements
+---
+
+## 🚀 Features
+
+- 📤 Upload business card images (PNG, JPG)
+- 🧠 Extract key data using EasyOCR:
+  - Company Name
+  - Card Holder Name
+  - Designation
+  - Phone Number
+  - Email Address
+  - Website URL
+  - Area, City, State, Pin Code
+- 🗃️ Store and retrieve data in SQLite/MySQL
+- 📝 Edit or delete saved entries through the UI
+- 📊 Dashboard to view and manage all records
+- 💡 Simple, clean and responsive interface using Dash + Flask
+
+---
+
+## 🛠️ Technologies Used
+
+| Component        | Tech Stack                     |
+|------------------|--------------------------------|
+| Backend          | Python, Flask, Dash            |
+| OCR Engine       | EasyOCR, OpenCV                |
+| Frontend         | Dash HTML Components, CSS      |
+| Database         | SQLite / MySQL (via SQLAlchemy or Connector) |
+| Other Libraries  | Pandas, Regex, Numpy           |
+
+---
+
+## 🧩 Project Structure
 
 
+---
 
-🛠️ Technologies Used
-  *  Streamlit: For creating the web application.
-  *  easyOCR: For Optical Character Recognition (OCR).
-  *  mySQL: For storing extracted data and business card images.
-  *  Pillow: For image handling and processing.
-  *  Pandas: For organizing and displaying tabular data.
+## 🔧 Installation & Setup
+
+1. **Clone the Repository**
+```bash
+git clone https://github.com/your-username/BizCardX.git
+cd BizCardX
 
 
-🎮 Usage
-Upload Business Card:
-1 Drag and drop or select an image file of a business card in the app.
-2 Extract Information:
-3 Click the "Extract" button to analyze the card and view the extracted details.
-4 Save Data:
-5 Save the extracted information and image into the database with a single click.
-6 View Database:
-7 View all saved entries in a tabular format with options to edit or delete entrie
+Flask
+dash
+easyocr
+opencv-python
+pandas
+numpy
+sqlalchemy          # If using SQLite
+mysql-connector-python  # If using MySQL
 
-📊 Example Workflows
-Extracting Data
-Upload a business card image (JPEG/PNG).
-The app extracts details like name, email, phone, etc., using easyOCR.
-Review the extracted details in the app.
+
